@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "C_Test.h"
 
 
 
@@ -56,5 +57,9 @@ int main(void) {
 
 	puts("Sorted");
 	output(array, length);
+
+	//Run tests
+	mainTest();
+
 	return EXIT_SUCCESS;
 }
