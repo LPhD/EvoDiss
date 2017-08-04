@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define SELECT
+#define QUICK
 
 #ifdef BUBBLE
 void bubblesort(int *array, int length) {
@@ -37,6 +37,35 @@ void selection(int *array, int length) {
 }
 #endif
 
+#ifdef QUICK
+/* Die Funktion erhält einen Zeiger auf das erste
+ * und einen zweiten Zeiger auf das letzte Element.
+ * Hier werden dazu die Namen »links« und »rechts« verwendet.
+ */
+void quick(int *links, int *rechts) {
+   int *ptr1 = links;
+   int *ptr2 = rechts;
+   int w, x;
+   /* x bekommt die Anfangsadresse der
+    * Mitte von links und rechts.
+    * Anstatt der Bitverschiebung hätten Sie
+    * auch einfach »geteilt durch 2« rechnen können.
+    */
+   x = *(links + (rechts - links >> 1));
+   do {
+      while(*ptr1 < x) ptr1++;
+      while(*ptr2 > x) ptr2--;
+      if(ptr1 > ptr2)
+         break;
+      w = *ptr1;
+      *ptr1 = *ptr2;
+      *ptr2 = w;
+   } while(++ptr1 <= --ptr2);
+   if(links < ptr2)  quick(links, ptr2);
+   if(ptr1 < rechts) quick(ptr1, rechts);
+}
+#endif
+
 
 void output(int *array, int length) {
 	puts("Array:");
@@ -55,9 +84,14 @@ int main(void) {
 	bubblesort(array, 5);
 #endif
 
-	#ifdef SELECT
+#ifdef SELECT
 	puts("\nSelection");
 	selection(array, 5);
+#endif
+
+#ifdef QUICK
+	puts("\nQuick");
+	quick(array, array+5);
 #endif
 
 	puts("Sorted");
