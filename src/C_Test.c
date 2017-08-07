@@ -27,16 +27,16 @@ void threeElmArray(){
 	bubblesort(arrayTest_1, 3);
 #elif defined SELECT
 	selection(arrayTest_1, 3);
-#elif defined QUICK
-	quick(arrayTest_1, arrayTest_1+3);
+#elif defined SHELL
+	shellsort(arrayTest_1, 3);
 #endif
 	if (!compareResults(arrayTest_1, arrayTest_1_sorted, 3)){
 #ifdef BUBBLE
 		puts("Sorting three elements array with bubblesort failed!");
 #elif defined SELECT
 		puts("Sorting three elements array with selection sort failed!");
-#elif defined QUICK
-		puts("Sorting three elements array with quicksort failed!");
+#elif defined SHELL
+		puts("Sorting three elements array with SHELLsort failed!");
 #endif
 	}
 
@@ -50,16 +50,16 @@ void zeroElmArray(){
 	bubblesort(arrayTest_2, 0);
 #elif defined SELECT
 	selection(arrayTest_2, 0);
-#elif defined QUICK
-	quick(arrayTest_2, arrayTest_2+0);
+#elif defined SHELL
+	shellsort(arrayTest_2, 0);
 #endif
 	if (!compareResults(arrayTest_2, arrayTest_2_sorted, 0)){
 #ifdef BUBBLE
 		puts("Sorting empty array with bubblesort failed!");
 #elif defined SELECT
 		puts("Sorting empty array with selection sort failed!");
-#elif defined QUICK
-		puts("Sorting empty array with quicksort failed!");
+#elif defined SHELL
+		puts("Sorting empty array with SHELLsort failed!");
 #endif
 	}
 
@@ -73,16 +73,16 @@ void tenElmArray(){
 	bubblesort(arrayTest_3, 10);
 #elif defined SELECT
 	selection(arrayTest_3, 10);
-#elif defined QUICK
-	quick(arrayTest_3, arrayTest_3+10);
+#elif defined SHELL
+	shellsort(arrayTest_3, 10);
 #endif
 	if (!compareResults(arrayTest_3, arrayTest_3_sorted, 10)){
 #ifdef BUBBLE
 		puts("Sorting ten elements array with bubblesort failed!");
 #elif defined SELECT
 		puts("Sorting ten elements array with selection sort failed!");
-#elif defined QUICK
-		puts("Sorting ten elements array with quicksort failed!");
+#elif defined SHELL
+		puts("Sorting ten elements array with shellsort failed!");
 #endif
 	}
 }

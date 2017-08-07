@@ -7,8 +7,8 @@ void bubblesort(int *array, int length);
 #ifdef SELECT
 void selection(int *array, int length);
 #endif
-#ifdef QUICK
-void quick(int *links, int *rechts);
+#ifdef SHELL
+void shellsort(int *array, int length);
 #endif
 void output(int *array, int length) ;
 

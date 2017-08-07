@@ -38,32 +38,20 @@ void selection(int *array, int length) {
 }
 #endif
 
-#ifdef QUICK
-/* Die Funktion erhält einen Zeiger auf das erste
- * und einen zweiten Zeiger auf das letzte Element.
- * Hier werden dazu die Namen »links« und »rechts« verwendet.
- */
-void quick(int *links, int *rechts) {
-   int *ptr1 = links;
-   int *ptr2 = rechts;
-   int w, x;
-   /* x bekommt die Anfangsadresse der
-    * Mitte von links und rechts.
-    * Anstatt der Bitverschiebung hätten Sie
-    * auch einfach »geteilt durch 2« rechnen können.
-    */
-   x = *(links + ((rechts - links) >> 1));
-   do {
-      while(*ptr1 < x) ptr1++;
-      while(*ptr2 > x) ptr2--;
-      if(ptr1 > ptr2)
-         break;
-      w = *ptr1;
-      *ptr1 = *ptr2;
-      *ptr2 = w;
-   } while(++ptr1 <= --ptr2);
-   if(links < ptr2)  quick(links, ptr2);
-   if(ptr1 < rechts) quick(ptr1, rechts);
+#ifdef SHELL
+void shellsort(int *array, int length) {
+  int i, j, temp, n;
+   /* Anfangswert für die Distanz errechnen */
+  for ( n = 1; n <= length/9; n = 3*n+1);
+  for (; n > 0; n /= 3) {
+     for (i = n; i <= length; i++) {
+        temp = array[i];
+        for(j = i; j >= n && array[j-n] > temp; j -= n) {
+           array[j] = array[j-n];
+        }
+        array[j] = temp;
+     }
+  }
 }
 #endif
 
@@ -90,9 +78,9 @@ int main(void) {
 	selection(array, 5);
 #endif
 
-#ifdef QUICK
-	puts("\nQuick");
-	quick(array, array+5);
+#ifdef SHELL
+	puts("\nShell");
+	shellsort(array, 5);
 #endif
 
 	puts("Sorted");
