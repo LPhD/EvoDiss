@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "C_Test.h"
 #include "Config.h"
 
 #ifdef BUBBLE
@@ -51,7 +52,7 @@ void quick(int *links, int *rechts) {
     * Anstatt der Bitverschiebung hätten Sie
     * auch einfach »geteilt durch 2« rechnen können.
     */
-   x = *(links + (rechts - links >> 1));
+   x = *(links + ((rechts - links) >> 1));
    do {
       while(*ptr1 < x) ptr1++;
       while(*ptr2 > x) ptr2--;
