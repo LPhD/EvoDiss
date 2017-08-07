@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define QUICK
+#include "Config.h"
 
 #ifdef BUBBLE
 void bubblesort(int *array, int length) {
@@ -96,5 +96,9 @@ int main(void) {
 
 	puts("Sorted");
 	output(array, 5);
+
+	//Run tests
+	mainTest();
+
 	return EXIT_SUCCESS;
 }
