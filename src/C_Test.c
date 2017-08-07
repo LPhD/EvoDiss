@@ -3,13 +3,17 @@
 #include <string.h>
 #include "C.h"
 
-void compareResults(int *arraySorted, int *arrayExpected, int length){
-	if(memcmp (arraySorted, arrayExpected, length) == 0){
+int compareResults(int *arraySorted, int *arrayExpected, int length){
+	int isEqual = 1;
+	for (int i = 0; i < length; ++i) {
+		if(!(arraySorted[i] == arrayExpected[i])) isEqual = 0;
+	}
+	if(isEqual == 1){
 		puts("Success!");
-//		return 1;
+		return 1;
 	} else {
 		puts("Fail!");
-//		return 0;
+		return 0;
 	}
 }
 
@@ -19,9 +23,13 @@ void threeElmArray(){
 	int arrayTest_1_sortedASC[3] = { 1,2,3 };
 	int arrayTest_1_sortedDESC[3] = { 3,2,1 };
 	bubblesort(arrayTest_1, 3);
-	compareResults(arrayTest_1, arrayTest_1_sortedASC, 3);
+	if (!compareResults(arrayTest_1, arrayTest_1_sortedASC, 3)){
+		puts("Sorting three elements array ascending failed!");
+	}
 	bubblesortReversed(arrayTest_1, 3);
-	compareResults(arrayTest_1, arrayTest_1_sortedDESC, 3);
+	if (!compareResults(arrayTest_1, arrayTest_1_sortedDESC, 3)){
+		puts("Sorting three elements array descending failed!");
+	}
 }
 
 //Runs tests with an empty array
@@ -50,6 +58,7 @@ void mainTest (){
 	//ToDo work with return of compare method
 	//int tester = 0;
 
+	puts("\nRunning tests...");
 	threeElmArray();
 	zeroElmArray();
 	tenElmArray();
