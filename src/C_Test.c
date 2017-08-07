@@ -38,9 +38,13 @@ void zeroElmArray(){
 	int arrayTest_2_sortedASC[0] = {};
 	int arrayTest_2_sortedDESC[0] = {};
 	bubblesort(arrayTest_2, 0);
-	compareResults(arrayTest_2, arrayTest_2_sortedASC, 0);
+	if (!compareResults(arrayTest_2, arrayTest_2_sortedASC, 0)){
+		puts("Sorting empty elements array ascending failed!");
+	}
 	bubblesortReversed(arrayTest_2, 0);
-	compareResults(arrayTest_2, arrayTest_2_sortedDESC, 0);
+	if (!compareResults(arrayTest_2, arrayTest_2_sortedDESC, 0)){
+		puts("Sorting empty elements array descending failed!");
+	}
 }
 
 //Runs tests with an array with ten elements
@@ -49,15 +53,16 @@ void tenElmArray(){
 	int arrayTest_3_sortedASC[10] = {-1, 0 , 1, 3, 3, 3, 4, 7, 9, 12};
 	int arrayTest_3_sortedDESC[10] = {12, 9, 7, 4, 3, 3, 3, 1, 0, -1};
 	bubblesort(arrayTest_3, 10);
-	compareResults(arrayTest_3, arrayTest_3_sortedASC, 10);
+	if (!compareResults(arrayTest_3, arrayTest_3_sortedASC, 10)){
+		puts("Sorting ten elements array ascending failed!");
+	}
 	bubblesortReversed(arrayTest_3, 10);
-	compareResults(arrayTest_3, arrayTest_3_sortedDESC, 10);
+	if (!compareResults(arrayTest_3, arrayTest_3_sortedDESC, 10)){
+		puts("Sorting ten elements array descending failed!");
+	}
 }
 
 void mainTest (){
-	//ToDo work with return of compare method
-	//int tester = 0;
-
 	puts("\nRunning tests...");
 	threeElmArray();
 	zeroElmArray();
