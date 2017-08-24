@@ -13,4 +13,6 @@
 #define MAKRO2(y) MAKRO3(y##2)
 #define MAKRO3(y) y##3
 
+#define SELECT BUBBLE
+
 #endif /* NOT_KCONFIG_H_ */

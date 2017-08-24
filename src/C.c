@@ -102,5 +102,9 @@ int main(void) {
 #endif
 #endif
 
+#ifdef SELECT
+	puts("\nBubble selected!");
+#endif
+
 	return EXIT_SUCCESS;
 }
