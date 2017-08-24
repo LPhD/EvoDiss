@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include "C_Test.h"
 #include "Config.h"
+#include "kconfig.h"
+#include "Not_kconfig.h"
 
 #ifdef BUBBLE
 void bubblesort(int *array, int length) {
@@ -65,12 +67,12 @@ void output(int *array, int length) {
 
 int main(void) {
 	int array[5] = { 5, 3, 1, 2, 4 };
-	puts("Initial");
-	output(array, 5);
+	//puts("Initial");
+	//output(array, 5);
 
 #ifdef BUBBLE
-	puts("\nBubble");
-	bubblesort(array, 5);
+	//puts("\nBubble");
+	//bubblesort(array, 5);
 #endif
 
 #ifdef SELECT
@@ -83,11 +85,22 @@ int main(void) {
 	shellsort(array, 5);
 #endif
 
-	puts("Sorted");
-	output(array, 5);
+	//puts("Sorted");
+	//output(array, 5);
 
 	//Run tests
-	mainTest();
+	//mainTest();
+#if(MAKRO(7) > 7)
+	printf("Die Zahl ist: %i", MAKRO(7));
+#if BUBBLE
+	puts("Bubble und Makro!");
+#endif
+#else
+	puts("Fehler!");
+#if BUBBLE
+	puts("Bubble ohne Makro!");
+#endif
+#endif
 
 	return EXIT_SUCCESS;
 }
