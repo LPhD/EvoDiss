@@ -92,13 +92,13 @@ int main(void) {
 	//mainTest();
 #if(MAKRO(7) > 7)
 	printf("Die Zahl ist: %i", MAKRO(7));
-#if BUBBLE
-	puts("Bubble und Makro!");
+#ifdef BUBBLE
+	puts("\nBubble und Makro!");
 #endif
 #else
 	puts("Fehler!");
-#if BUBBLE
-	puts("Bubble ohne Makro!");
+#ifdef BUBBLE
+	puts("\nBubble ohne Makro!");
 #endif
 #endif
 
