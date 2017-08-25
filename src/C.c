@@ -104,7 +104,7 @@ int main(void) {
 
 	printf("Makro: %i",IS_ENABLED(BUBBLE));
 
-#ifdef SELECT
+#ifdef BUBBLE2
 	puts("\nBubble selected!");
 #endif
 
