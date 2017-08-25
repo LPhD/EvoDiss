@@ -90,7 +90,7 @@ int main(void) {
 
 	//Run tests
 	//mainTest();
-#if(MAKRO(7) > 7)
+#if(MAKRO(7) > 7) && !(IS_ENABLED(BUBBLE))
 	printf("Die Zahl ist: %i", MAKRO(7));
 #ifdef BUBBLE
 	puts("\nBubble und Makro!");
@@ -101,6 +101,8 @@ int main(void) {
 	puts("\nBubble ohne Makro!");
 #endif
 #endif
+
+	printf("Makro: %i",IS_ENABLED(BUBBLE));
 
 #ifdef SELECT
 	puts("\nBubble selected!");
