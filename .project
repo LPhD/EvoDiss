@@ -35,6 +35,5 @@
 		<nature>org.eclipse.xtext.ui.shared.xtextNature</nature>
 		<nature>de.uni_hildesheim.sse.EASy-Producer</nature>
 		<nature>org.eclipse.cdt.autotools.core.autotoolsNatureV2</nature>
-		<nature>org.eclipse.cdt.core.ccnature</nature>
 	</natures>
 </projectDescription>

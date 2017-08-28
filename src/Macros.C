@@ -2,10 +2,15 @@
 #include <stdlib.h>
 #include "kconfig.h"
 #include "Config.h"
-#include "Makros.h"
+
+#define MAKRO(y) MAKRO2(y##1)
+#define MAKRO2(y) MAKRO3(y##2)
+#define MAKRO3(y) y##3
+
+#define BUBBLE2 BUBBLE
 
 
-void testMakros(){
+void testMacros(){
 
 #if(MAKRO(7) > 7) && (IS_ENABLED(BUBBLE))
 	printf("Die Zahl ist: %i", MAKRO(7));

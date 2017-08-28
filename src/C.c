@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "Macros.h"
 #include "C_Test.h"
 #include "Config.h"
-#include "Makros.h"
+
 
 #ifdef BUBBLE
 void bubblesort(int *array, int length) {
@@ -90,8 +91,8 @@ int main(void) {
 //	Run tests
 	mainTest();
 
-// Run makros
-	testMakros();
+// Run macros
+	testMacros();
 
 	return EXIT_SUCCESS;
 }
