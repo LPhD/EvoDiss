@@ -113,25 +113,13 @@
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
 	<storageModule moduleId="scannerConfiguration">
 		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cross.exe.release.300516116;cdt.managedbuild.config.gnu.cross.exe.release.300516116.;cdt.managedbuild.tool.gnu.cross.c.compiler.621075050;cdt.managedbuild.tool.gnu.c.compiler.input.715031374">
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cross.exe.release.1821175008;cdt.managedbuild.config.gnu.cross.exe.release.1821175008.;cdt.managedbuild.tool.gnu.c.compiler.mingw.base.293317218;cdt.managedbuild.tool.gnu.c.compiler.input.2090203158">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cross.exe.debug.839558343;cdt.managedbuild.config.gnu.cross.exe.debug.839558343.;cdt.managedbuild.tool.gnu.cross.cpp.compiler.970423644;cdt.managedbuild.tool.gnu.cpp.compiler.input.585777711">
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cross.exe.release.1821175008;cdt.managedbuild.config.gnu.cross.exe.release.1821175008.;cdt.managedbuild.tool.gnu.cross.c.compiler.145660810;cdt.managedbuild.tool.gnu.c.compiler.input.1940512764">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cross.exe.debug.839558343;cdt.managedbuild.config.gnu.cross.exe.debug.839558343.;cdt.managedbuild.tool.gnu.cross.c.compiler.163984330;cdt.managedbuild.tool.gnu.c.compiler.input.593504325">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cross.exe.release.300516116;cdt.managedbuild.config.gnu.cross.exe.release.300516116.;cdt.managedbuild.tool.gnu.cross.cpp.compiler.60347446;cdt.managedbuild.tool.gnu.cpp.compiler.input.1689525880">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="0.1749438496">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cross.exe.release.1111661112;cdt.managedbuild.config.gnu.cross.exe.release.1111661112.;cdt.managedbuild.tool.gnu.cross.c.compiler.1712744009;cdt.managedbuild.tool.gnu.c.compiler.input.84137849">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cross.exe.debug.1183791609;cdt.managedbuild.config.gnu.cross.exe.debug.1183791609.;cdt.managedbuild.tool.gnu.cross.c.compiler.929002713;cdt.managedbuild.tool.gnu.c.compiler.input.1473843589">
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cross.exe.debug.1158721043;cdt.managedbuild.config.gnu.cross.exe.debug.1158721043.;cdt.managedbuild.tool.gnu.cross.c.compiler.461988084;cdt.managedbuild.tool.gnu.c.compiler.input.849222807">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
 	</storageModule>
