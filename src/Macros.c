@@ -24,7 +24,8 @@ void testMacros(){
 #endif
 #endif
 
-printf("Makro: %i",IS_ENABLED(BUBBLE));
+printf("Makro IS_ENABLED: %i",IS_ENABLED(BUBBLE));
+printf("\nMakro MAKRO(7): %i",MAKRO(7));
 
 #ifdef BUBBLE2
 	puts("\nBubble selected!");
