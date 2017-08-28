@@ -1,2 +1,6 @@
 /Release/
+<<<<<<< HEAD
 /Debug/
+=======
+/.cproject
+>>>>>>> branch 'OnlyBubble' of https://github.com/LPhD/EvoDiss.git
