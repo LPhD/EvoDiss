@@ -2,8 +2,7 @@
 #include <stdlib.h>
 #include "C_Test.h"
 #include "Config.h"
-#include "kconfig.h"
-#include "Not_kconfig.h"
+#include "Makros.h"
 
 #ifdef BUBBLE
 void bubblesort(int *array, int length) {
@@ -67,12 +66,12 @@ void output(int *array, int length) {
 
 int main(void) {
 	int array[5] = { 5, 3, 1, 2, 4 };
-	//puts("Initial");
-	//output(array, 5);
+	puts("Initial");
+	output(array, 5);
 
 #ifdef BUBBLE
-	//puts("\nBubble");
-	//bubblesort(array, 5);
+	puts("\nBubble");
+	bubblesort(array, 5);
 #endif
 
 #ifdef SELECT
@@ -85,28 +84,14 @@ int main(void) {
 	shellsort(array, 5);
 #endif
 
-	//puts("Sorted");
-	//output(array, 5);
+	puts("Sorted");
+	output(array, 5);
 
-	//Run tests
-	//mainTest();
-#if(MAKRO(7) > 7) && (IS_ENABLED(BUBBLE))
-	printf("Die Zahl ist: %i", MAKRO(7));
-#ifdef BUBBLE
-	puts("\nBubble und Makro!");
-#endif
-#else
-	puts("Fehler!");
-#ifdef BUBBLE
-	puts("\nBubble ohne Makro!");
-#endif
-#endif
+//	Run tests
+	mainTest();
 
-	printf("Makro: %i",IS_ENABLED(BUBBLE));
-
-#ifdef BUBBLE2
-	puts("\nBubble selected!");
-#endif
+// Run makros
+	testMakros();
 
 	return EXIT_SUCCESS;
 }
