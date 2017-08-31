@@ -1,5 +1,6 @@
 #ifndef __LINUX_KCONFIG_H
 #define __LINUX_KCONFIG_H
+#include "Config.h"
 
 /*
  * Helper macros to use CONFIG_ options in C/CPP expressions. Note that
