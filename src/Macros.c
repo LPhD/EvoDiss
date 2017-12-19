@@ -1,13 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "Macros.h"
 #include "kconfig.h"
 #include "Config.h"
 
-#define MAKRO(y) MAKRO2(y##1)
-#define MAKRO2(y) MAKRO3(y##2)
-#define MAKRO3(y) y##3
-
-#define BUBBLE2 BUBBLE
 
 
 //Test method for macros and partial preprocessor in pure::variants
