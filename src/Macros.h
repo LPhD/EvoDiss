@@ -5,8 +5,6 @@
 #define MAKRO2(y) MAKRO3(y##2)
 #define MAKRO3(y) y##3
 
-#define BUBBLE2 BUBBLE
-
 
 // Macros to support option testing (from Marlin)
 #define _CAT(a, ...) a ## __VA_ARGS__

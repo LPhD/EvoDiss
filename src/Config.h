@@ -2,6 +2,6 @@
 #define Config_H__H_
 
 //Note: Shell and quicksort seem buggy, not deterministc behaviour occurs
-#define BUBBLE 1
+#define BUBBLE 0
 
 #endif
