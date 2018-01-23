@@ -37,20 +37,31 @@ void test (){
 //Test method for macros and partial preprocessor
 void testMacros(){
 
+//True for selection of BUBBLE
 #if(MAKRO(7) > 7) && (IS_ENABLED(BUBBLE) && ENABLED(BUBBLE))
 	printf("Die Zahl ist: %i", MAKRO(7));
+	//True for selection of BUBBLE
 	#ifdef BUBBLE
 		puts("\nBubble und Makro!");
 	#endif
+//False for selection of BUBBLE
 #else
 	puts("Fehler!");
+	//True for define of BUBBLE (def BUBBLE, not def BUBBLE 1)
 	#ifdef BUBBLE
 		puts("\nBubble ohne Makro!");
 	#endif
 #endif
 
+//True if BUBBLE == 1
+#if IS_ENABLED(BUBBLE)
 	printf("\nMakro IS_ENABLED: %i",IS_ENABLED(BUBBLE));
+#endif
+//True if BUBBLE == 1
+#if ENABLED(BUBBLE)
 	printf("\nMakro ENABLED: %i",ENABLED(BUBBLE));
+#endif
+
 	printf("\nMakro MAKRO(7): %i",MAKRO(7));
 
 #ifdef BUBBLE2
