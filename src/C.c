@@ -16,9 +16,24 @@ void bubblesort(int *array, int length) {
 				array[j + 1] = tmp;
 			}
 		}
+#endif
+#ifdef BUBBLE
 	}
 }
+
+#else
+	#ifdef BUBBLE
+	}
+	#else
+	}
+	#endif
+}
+
+//Neue Methode
+
 #endif
+
+
 
 #ifdef SELECT
 void selection(int *array, int length) {
