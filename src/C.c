@@ -28,6 +28,8 @@ void bubblesortReversed(int *array, int length) {
 			}
 		}
 	}
+	puts("Sorted");
+	output(array,length);
 }
 
 
@@ -54,9 +56,6 @@ int main(void) {
 
 	puts("\nBubbleReversed");
 	bubblesortReversed(array, length);
-
-	puts("Sorted");
-	output(array, length);
 
 	//Run tests
 	mainTest();
