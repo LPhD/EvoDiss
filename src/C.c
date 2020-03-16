@@ -1,7 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "C_Test.h"
+#include "info/Info.h"
 
+
+void output(int *array, int length) {
+	puts("Array:");
+	for (int var = 0; var < length; ++var) {
+		printf("%i \n", array[var]);
+	}
+}
 
 
 void bubblesort(int *array, int length) {
@@ -35,23 +43,12 @@ void bubblesortReversed(int *array, int length) {
 }
 
 
-void output(int *array, int length) {
-	puts("Array:");
-	for (int var = 0; var < length; ++var) {
-		printf("%i \n", array[var]);
-	}
-}
 
-void info() {
-	puts("This is a bubblesort program");
-	puts("You can order numbers ascending or descending");
-}
 
 int main(void) {
 	info();
 	int array[5] = { 5, 3, 1, 2, 4 };
 	int length = sizeof(array) / sizeof(int);
-	printf("%i", length);
 
 	puts("Initial");
 	output(array, length);
