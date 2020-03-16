@@ -42,7 +42,13 @@ void output(int *array, int length) {
 	}
 }
 
+void info() {
+	puts("This is a bubblesort program");
+	puts("You can order numbers ascending or descending");
+}
+
 int main(void) {
+	info();
 	int array[5] = { 5, 3, 1, 2, 4 };
 	int length = sizeof(array) / sizeof(int);
 	printf("%i", length);
